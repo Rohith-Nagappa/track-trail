@@ -1,0 +1,6 @@
+to install backend steps
+1) create folder named as backend
+2) run following cmd in backend folder
+      npm init
+press enter, if you want you can add entry point app.js instead of index.js and press enter again, again run cmd
+      npm install express mongoose cors nodemon     
