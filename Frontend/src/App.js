@@ -1,6 +1,13 @@
+import { styled } from "styled-components";
 const App = () =>{
   return(
-    <h2>iam robot</h2>
+    <AppStyled className="App">
+      iam robot
+      </AppStyled>
   )
 }
+
+const AppStyled = styled.div`
+
+`;
 export default App;

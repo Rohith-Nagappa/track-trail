@@ -19,3 +19,9 @@ to run backend make sure that in package.json change
 
 Now you can run backend just run
   npm start
+
+
+PACKAGES installed in frontend are
+axios,chart.js,moment,react-chartjs-2,react-datepicker,styled-components
+also we used googlefonts and copied nunito family and pasted in index.html present in public folder
+also copy css code of nunito and paste in body property of golbalstyles.js
