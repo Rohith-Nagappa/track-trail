@@ -4,7 +4,7 @@ const cors = require('cors')
 const {db} = require('./db/db');
 // const {router} = require('./routes/transactions')
 const { default: mongoose } = require("mongoose");
-const {readdirSync} =require('fs');
+const {readdirSync} = require('fs');
 const app = express();
 dotenv.config();
 
