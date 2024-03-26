@@ -19,9 +19,9 @@ dotenv.config();
    
 //   connectDB();
 
-// app.get("/", (req, res) => {
-//     res.send("API is running...");
-//   });
+app.get("/", (req, res) => {
+    res.send("API is running...");
+  });
    
 
   const PORT = process.env.PORT || 5000;
