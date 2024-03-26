@@ -4,3 +4,18 @@ to install backend steps
       npm init
 press enter, if you want you can add entry point app.js instead of index.js and press enter again, again run cmd
       npm install express mongoose cors nodemon     
+    express,mongoose,cors,nodemon all are dependies for backend
+intall
+  npm install dotenv
+
+to run backend make sure that in package.json change
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+          TO
+ "scripts": {
+    "start": "nodemon app.js"
+  },
+
+Now you can run backend just run
+  npm start
