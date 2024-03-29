@@ -13,7 +13,7 @@ const Orb = () => {
           transform: translate(0, 0);
        }
        50%{
-        transform: translate(${width}px, ${height}px);
+        transform: translate(${width/1.2}px, ${height/2}px);
        }
        100%{
         transform: translate(0, 0);
@@ -29,7 +29,7 @@ const Orb = () => {
     margin-left: -37vh;
     background: linear-gradient(180deg, #F56692 0%, #F2994A 100%);
     filter: blur(200px);
-    animation: ${moveOrb} 1s alternate linear infinite;
+    animation: ${moveOrb} 15s alternate linear infinite;
     `;
 
     return(
