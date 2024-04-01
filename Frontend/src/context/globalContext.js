@@ -1,9 +1,9 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 import axios from 'axios';
 
 const BASE_URL = "http://localhost:5000/api/v1/";
 
- const GlobalContext = createContext();
+ const GlobalContext = createContext(); //GLOBAL CONTEXT TO ACCESS DATA
 
  export const GlobalProvider = ({children}) => {
 
@@ -19,8 +19,14 @@ const BASE_URL = "http://localhost:5000/api/v1/";
     }
 
     return (
-        <GlobalContext.Provider value={'hello'}>
+        <GlobalContext.Provider value={{
+          addIncome
+        }}>
             {children}
         </GlobalContext.Provider>
     )
- }
+ };
+
+ export  const useGlobalContext = () =>{
+  return useContext(GlobalContext)
+ };

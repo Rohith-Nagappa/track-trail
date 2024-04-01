@@ -10,7 +10,8 @@ root.render(
   <React.StrictMode>
     <GlobalStyle/>
     <GlobalProvider>
-    <App />
+    <App />               
+    {/* HERE APP IS CHILDREN SO WRAP IN GlobalProvider */}
     </GlobalProvider>
   </React.StrictMode>
 );
