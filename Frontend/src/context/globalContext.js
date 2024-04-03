@@ -19,9 +19,7 @@ const BASE_URL = "http://localhost:5000/api/v1/";
     }
 
     return (
-        <GlobalContext.Provider value={{
-          addIncome
-        }}>
+        <GlobalContext.Provider value={{addIncome}}>
             {children}
         </GlobalContext.Provider>
     )

@@ -97,7 +97,9 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useGlobalContext } from '../../context/globalContext';
 
 const Form = () => {
+
     const { addIncome } = useGlobalContext();
+
     const [inputState, setInputState] = useState({
         title: '',
         amount: '',
@@ -162,6 +164,13 @@ const Form = () => {
                     <option value="youtube" >Youtube</option>
                     <option value="other" >Other</option>
                 </select>
+            </div>
+            
+            <div className='input-control'>
+                <textarea value={description} name='description' id='description' placeholder='Add a Reference' 
+                cols='30' rows='4' onChange={(e) => handleInput('description',e)}
+                >
+                </textarea>
             </div>
             <div className='submit-btn'>
                 <button>Add Income</button>
