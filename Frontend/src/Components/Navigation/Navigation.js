@@ -9,7 +9,7 @@ const Navigation = ({active,setActive}) => {
         
     <NavStyled>
         <div className="user-con">
-        <img src={avatar} alt=""/>
+        <img src={avatar} alt="avatar"/>
         <div className="text">
             <h2>Hanu Man</h2>
             <p>Your Money</p>
@@ -98,6 +98,9 @@ gap: 2rem;
 };
 
 .active{
+    background-color: lightblue;
+    padding:10px;
+    border-radius: 10px;
     color: rgba(34,34,96,1) !important
     i{
         color: rgba(34,34,96,1) !impoetant
@@ -113,6 +116,26 @@ gap: 2rem;
         border-radius: 0 10px 10px 0;
     }
 };
+
+.bottom-nav {
+cursor: pointer;
+width: 130px;
+padding: 7px;
+color: #001e42;
+box-sizing: border-box;
+border-radius: 10px;
+border-color: gray;
+background-color: #c6f0b6;
+};
+
+.bottom-nav:hover{
+    width: 130px;
+    background-color: #564c70;
+    color: white;
+    padding: 10px;
+    border-radius:10px;
+    transition: all 0.4s ease-in-out;
+}
 
 
 `;

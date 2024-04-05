@@ -17,7 +17,7 @@ const BASE_URL = "http://localhost:5000/api/v1/";
         setError(err.response.data.message)
       })
     }
-
+   
     return (
         <GlobalContext.Provider value={{addIncome}}>
             {children}

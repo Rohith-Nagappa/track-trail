@@ -179,6 +179,20 @@ const Form = () => {
     );
 }
 
-const Formstyled = styled.form``;
+const Formstyled = styled.form`
+      display:flex;
+      flex-direction: column;
+      gap: 2rem;
+      input, textarea, select{
+          font-family: inherit;
+          font-size: inherit;
+          outline: none;
+          border: none;
+          padding: .5rem 1rem;
+          border-radius: 5px;
+          border: 2px solid #fff;
+      }
+
+`;
 
 export default Form;
