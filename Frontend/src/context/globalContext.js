@@ -16,10 +16,21 @@ const BASE_URL = "http://localhost:5000/api/v1/";
       .catch((err) =>{
         setError(err.response.data.message)
       })
-    }
+    };
+
+    const getIncomes = async () => {
+      const response =  await axios.get(`${BASE_URL}get-incomes`)
+      setIncomes(response.data)
+      console.log(response.data)
+      // .catch((err) =>{
+      //   setError(err.response.data.message)
+      // })
+    };
+
+   
    
     return (
-        <GlobalContext.Provider value={{addIncome}}>
+        <GlobalContext.Provider value={{addIncome,getIncomes,incomes}}>
             {children}
         </GlobalContext.Provider>
     )

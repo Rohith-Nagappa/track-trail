@@ -116,7 +116,6 @@ const Formstyled = styled.form`
         input{
             width: 100%;
         }
-        
       }
 
       .selects{
