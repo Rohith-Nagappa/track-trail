@@ -20,8 +20,11 @@ const Income = () =>{
                     </div>
                     <div className="incomes">
                       {incomes.map((income) =>{
-                         const {id,title,amount,date,category,description} = income;
-                         return <IncomeItem income={income}/>
+                         const {_id,title,amount,date,category,description} = income;
+                         return <IncomeItem key={_id} id={_id} title={title} description={description} 
+                                  amount={amount} date={date} category={category} indicatorColor="var(--color-green)"
+                         />
+
                       })}
                     </div>
                 </div>
@@ -31,7 +34,15 @@ const Income = () =>{
 }
 
 const IncomeStyled = styled.div`
-
+       display: flex;
+       overflow: auto;
+       .income-content{
+        display: flex;
+        gap: 2rem;
+        .incomes{
+            flex: 1;
+        }
+       }
 `;
 
 export default Income;
