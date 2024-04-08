@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { bitcoin, calender, card, comment, freelance, money, piggy, rupee, stocks, trash, users, yt } from "../../utils/icons";
+import { bitcoin, book, calender, card, circle, clothing, comment, food, freelance, medical, money, piggy, rupee, stocks, takeaway, trash, tv, users, yt } from "../../utils/icons";
 import Button from "../Button/Button";
 
 const IncomeItem = ({id,title,amount,date,category,description,deleteItem,indicatorColor,type}) => {
@@ -10,7 +10,7 @@ const IncomeItem = ({id,title,amount,date,category,description,deleteItem,indica
                 return money;
                 case 'freelancing':
                     return freelance;
-                       case 'investment':
+                       case 'investments':
                        return stocks;
                           case 'stocks':
                             return users;
@@ -26,10 +26,33 @@ const IncomeItem = ({id,title,amount,date,category,description,deleteItem,indica
                                                 return ''
         }
     };
-    
+
+    const expenseCatIcon = () => {
+        switch (category) {
+            case 'education':
+                return book;
+                case 'groceries':
+                    return food;
+                       case 'health':
+                       return medical;
+                          case 'subscriptions':
+                            return tv;
+                            case 'takeaways':
+                                return takeaway;
+                                case 'clothing':
+                                    return clothing;
+                                    case 'travelling':
+                                        return freelance;
+                                        case 'other':
+                                            return circle;
+                                            default:
+                                                return ''
+        }
+    };
+
     return(<IncomeItemStyled indicator={indicatorColor}>
         <div className="icon">
-
+       {type === 'expense' ? expenseCatIcon(): categoryIcon() }
         </div>
         <div className="content">
             <h5>{title}</h5>
@@ -41,7 +64,7 @@ const IncomeItem = ({id,title,amount,date,category,description,deleteItem,indica
                 </div>
                 <div className="btn-con">
                     <Button  icon={trash} bPad={'1rem'} bRad={'50%'} bg={'var(--primary-color)'}
-                color={'#fff'} iColor={'#fff'} hColor={'var(color-green)'} />
+                       color={'#fff'} iColor={'#fff'} hColor={'var(color-green)'} onClick={() => deleteItem(id)} />
                 </div>
             </div>
         </div>
