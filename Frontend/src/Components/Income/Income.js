@@ -59,6 +59,11 @@ const IncomeStyled = styled.div`
         margin: 1rem 0;
         font-size: 2rem;
         gap: .5rem;
+        span{
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--color-green);
+        }
        }
 
        .income-content{

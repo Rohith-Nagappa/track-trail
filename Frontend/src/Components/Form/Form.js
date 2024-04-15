@@ -31,8 +31,14 @@ const Form = () => {
     const handleSubmit = e => {
         e.preventDefault();
         addIncome(inputState);
+        setInputState({              //this will clear input feilds
+            title: '',
+            amount: '',
+            date: null,
+            category: '',
+            description: '',
+        })
         // getIncomes();
-
     };
 
     return (
