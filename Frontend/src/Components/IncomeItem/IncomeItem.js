@@ -58,7 +58,7 @@ const IncomeItem = ({id,title,amount,date,category,description,deleteItem,indica
             <h5>{title}</h5>
             <div className="inner-content">
                 <div className="text">
-                    <p>{rupee} 45</p>
+                    <p>{rupee} {amount}</p>
                     <p>{calender} {date}</p>
                     <p>{comment} {description}</p>
                 </div>

@@ -16,6 +16,7 @@ const BASE_URL = "http://localhost:5000/api/v1/";
       .catch((err) =>{
         setError(err.response.data.message)
       })
+      getIncomes()
     };
 
     const getIncomes = async () => {
@@ -29,12 +30,21 @@ const BASE_URL = "http://localhost:5000/api/v1/";
 
     const deleteIncome = async (id) => {
        const res = await axios.delete(`${BASE_URL}delete-income/${id}`)
+       getIncomes()
     }
 
-   
+    const totalIncome = () => {
+      let totalIncome = 0;
+      incomes.forEach((income) => {
+        totalIncome = totalIncome + income.amount
+      })
+      return totalIncome;
+    }   
+
+    console.log(totalIncome())
    
     return (
-        <GlobalContext.Provider value={{addIncome,getIncomes,incomes,deleteIncome}}>
+        <GlobalContext.Provider value={{addIncome,getIncomes,incomes,deleteIncome,totalIncome}}>
             {children}
         </GlobalContext.Provider>
     )
