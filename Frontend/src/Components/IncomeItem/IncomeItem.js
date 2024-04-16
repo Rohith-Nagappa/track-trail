@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { bitcoin, book, calender, card, circle, clothing, comment, food, freelance, medical, money, piggy, rupee, stocks, takeaway, trash, tv, users, yt } from "../../utils/icons";
 import Button from "../Button/Button";
+import { dateFormat } from "../../utils/dateFormat";
 
 const IncomeItem = ({id,title,amount,date,category,description,deleteItem,indicatorColor,type}) => {
     const categoryIcon = () => {
@@ -59,7 +60,7 @@ const IncomeItem = ({id,title,amount,date,category,description,deleteItem,indica
             <div className="inner-content">
                 <div className="text">
                     <p>{rupee} {amount}</p>
-                    <p>{calender} {date}</p>
+                    <p>{calender} {dateFormat(date)}</p>
                     <p>{comment} {description}</p>
                 </div>
                 <div className="btn-con">
