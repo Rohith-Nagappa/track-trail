@@ -72,6 +72,18 @@ const BASE_URL = "http://localhost:5000/api/v1/";
       })
       return totalIncome;
     } 
+
+    const totalBalance = () =>{
+      return totalIncome() - totalExpenses()
+    }
+
+    const transactionHistory = () => {
+      const history = [...incomes,...expenses];
+      history.sort((a,b) => {
+            return new Date(b.createdAt) - new Date(a.createdAt)
+      })
+      return history;
+    }
    
     return (
         <GlobalContext.Provider value={{
@@ -84,7 +96,9 @@ const BASE_URL = "http://localhost:5000/api/v1/";
           getExpenses,
           expenses,
           deleteExpense,
-          totalExpenses
+          totalExpenses,
+          totalBalance,
+          transactionHistory
           }}>
             {children}
         </GlobalContext.Provider>
