@@ -43,8 +43,8 @@ const BASE_URL = "http://localhost:5000/api/v1/";
     }   
 
      // CALCULATE EXPENSE
-     const addExpense = async (income) => {
-      const response =  await axios.post(`${BASE_URL}add-expense`,income)
+     const addExpense = async (expense) => {
+      const response =  await axios.post(`${BASE_URL}add-expense`,expense)
       .catch((err) =>{
         setError(err.response.data.message)
       })
@@ -54,7 +54,7 @@ const BASE_URL = "http://localhost:5000/api/v1/";
     const getExpenses = async () => {
       const response =  await axios.get(`${BASE_URL}get-expenses`)
       setExpenses(response.data)
-      console.log(response.data)
+      console.log('its expense data',response.data)
       // .catch((err) =>{
       //   setError(err.response.data.message)
       // })
