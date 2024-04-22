@@ -82,7 +82,7 @@ const BASE_URL = "http://localhost:5000/api/v1/";
       history.sort((a,b) => {
             return new Date(b.createdAt) - new Date(a.createdAt)
       })
-      return history;
+      return history.slice(0,5)
     }
    
     return (
@@ -98,7 +98,9 @@ const BASE_URL = "http://localhost:5000/api/v1/";
           deleteExpense,
           totalExpenses,
           totalBalance,
-          transactionHistory
+          transactionHistory,
+          error,
+          setError
           }}>
             {children}
         </GlobalContext.Provider>

@@ -8,7 +8,7 @@ import { plus } from '../../utils/icons';
 
 const Form = () => {
 
-    const { addIncome,getIncomes } = useGlobalContext();
+    const { addIncome,getIncomes ,error,setError} = useGlobalContext();
 
     const [inputState, setInputState] = useState({
         title: '',
@@ -21,7 +21,8 @@ const Form = () => {
     const { title, amount, date, category, description } = inputState;
 
     const handleInput = (name, e) => {
-        setInputState({ ...inputState, [name]: e.target.value });
+        setInputState({ ...inputState, [name]: e.target.value })
+        setError('')
     };
 
     const handleDateChange = date => {
@@ -43,6 +44,7 @@ const Form = () => {
 
     return (
         <Formstyled onSubmit={handleSubmit}>
+            {error && <p className='error'>{error}</p>}
             <div className='input-control'>
                 <input 
                     type='text'

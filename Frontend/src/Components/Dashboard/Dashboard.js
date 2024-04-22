@@ -9,7 +9,7 @@ import History from "../../History/History";
 const Dashboard = () =>{
     const {totalExpenses,totalIncome,totalBalance,getIncomes,getExpenses,incomes,expenses}= useGlobalContext()
     
-
+// console.log(totalBalance());
     useEffect(() => {
       getIncomes()
       getExpenses()
